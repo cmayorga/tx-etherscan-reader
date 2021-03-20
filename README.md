@@ -10,7 +10,7 @@ For recover from server crashes and/or reboots configure cron daemon as follow:
 
 crontab -e
 add next line:
-@reboot cd [path/to/project]; pm2 start dist/app.js -- [eth_address]
+@reboot cd [path/to/project]; pm2 start dist/app.js --restart-delay=1000 -- [eth_address]
 ctrl+x to exit cron and save changes
 
 ## Install
@@ -31,7 +31,7 @@ For Ropsten you can send to yourself paper ETHs from https://faucet.dimensions.n
 
 ## How to use
 
-pm2 start dist/app.js -- [eth_address_to_read_transactions]
+pm2 start dist/app.js --restart-delay=1000 -- [eth_address_to_read_transactions]
 
 ## Runnig test
 
