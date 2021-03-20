@@ -15,13 +15,13 @@ ctrl+x to exit cron and save changes
 
 ## Install
 
-git clone https://github.com/cmayorga/tx-etherscan-reader.git
-cd tx-reader-etherscan
-npm install
+git clone https://github.com/cmayorga/tx-etherscan-reader.git  
+cd tx-reader-etherscan  
+npm install  
 
-cp .env.development .env  (For Ropsten network)
-cp .env.production .env (For Mainnet netowrk)
-configure .env constants properly
+cp .env.development .env  (For Ropsten network)  
+cp .env.production .env (For Mainnet netowrk)  
+configure .env constants properly  
 
 npm run build
 
@@ -35,11 +35,11 @@ pm2 start dist/app.js --restart-delay=1000 -- [eth_address_to_read_transactions]
 
 ## Runnig test
 
-Method 1)
-tail -f OUTPUT.txt to observe file changes
+Method 1)  
+tail -f OUTPUT.txt to observe file changes  
 You can use Metamask or any other Wallet to send a transaction to address being listened
 
-Method 2)
-You need to configure address and private key to send a signed transaction
-Run the app as above step, you should to use TEST_DESTINATION_WALLET_ADDRESS at .env file as parameter to listen for transactions
+Method 2)  
+You need to configure address and private key to send a signed transaction  
+Run the app as above step, you should to use TEST_DESTINATION_WALLET_ADDRESS at .env file as parameter to listen for transactions  
 Run the test "npm run test"
