@@ -1,0 +1,7 @@
+#build
+/node_modules
+/dist
+
+OUTPUT.txt
+state.txt
+.env
