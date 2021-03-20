@@ -8,8 +8,8 @@ pm2 is used to auto-recover from application crashes
 
 For recover from server crashes and/or reboots configure cron daemon as follow:
 
-crontab -e
-add next line:
+crontab -e  
+add next line:  
 @reboot cd [path/to/project]; pm2 start dist/app.js --restart-delay=1000 -- [eth_address]
 ctrl+x to exit cron and save changes
 
